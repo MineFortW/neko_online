@@ -15,7 +15,7 @@ body, html {
     padding: 20px;
 }
 
-.header, .footer{
+.header, .footer {
     background: linear-gradient(45deg, #6A1B9A, #AB47BC);
     color: white;
     padding: 20px 0;
