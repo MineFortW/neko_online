@@ -5,6 +5,12 @@ body, html {
     background: #F5F5F5;
     color: #333;
     overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -14,7 +20,7 @@ body, html {
     padding: 20px;
 }
 
-.header, .footer {
+.header {
     background: linear-gradient(45deg, #6A1B9A, #AB47BC);
     color: white;
     padding: 20px 0;
@@ -31,49 +37,13 @@ body, html {
     margin-bottom: 20px;
 }
 
-.header .download-button {
-    background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: background 0.3s ease;
-}
-
-.header .download-button:hover {
-    background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
-}
 .main {
     margin: 40px 0;
-}
-
-.main h2, .gallery h2, .community h2, .info h2, .support h2 {
-    text-align: center;
-}
-
-.gallery, .community, .info, .support {
-    margin-bottom: 40px;
-}
-
-.gallery-grid, .community-grid {
+    flex: 1; /* Занимает всё доступное пространство */
     display: flex;
     justify-content: center;
-    gap: 20px;
-}
-
-.gallery img, .community img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 .section-content {
@@ -97,10 +67,19 @@ body, html {
     line-height: 1.6;
 }
 
+.footer {
+    background: linear-gradient(45deg, #6A1B9A, #AB47BC);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Размещает футер в самом низу страницы */
+}
+
 .footer p {
     font-size: 1em;
     margin: 0;
 }
+
 
 form {
     display: flex;
