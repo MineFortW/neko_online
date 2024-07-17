@@ -37,13 +37,49 @@ body {
     margin-bottom: 20px;
 }
 
+.header .download-button {
+    background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.header .download-button:hover {
+    background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
+}
 .main {
     margin: 40px 0;
-    flex: 1; /* Занимает всё доступное пространство */
+}
+
+.main h2, .gallery h2, .community h2, .info h2, .support h2 {
+    text-align: center;
+}
+
+.gallery, .community, .info, .support {
+    margin-bottom: 40px;
+}
+
+.gallery-grid, .community-grid {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    gap: 20px;
+}
+
+.gallery img, .community img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 .section-content {
@@ -67,19 +103,10 @@ body {
     line-height: 1.6;
 }
 
-.footer {
-    background: linear-gradient(45deg, #6A1B9A, #AB47BC);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto; /* Размещает футер в самом низу страницы */
-}
-
 .footer p {
     font-size: 1em;
     margin: 0;
 }
-
 
 form {
     display: flex;
@@ -100,27 +127,6 @@ button {
     border: none;
     cursor: pointer;
 }
-
-.header .download-button {
-    background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: background 0.3s ease;
-}
-
-.header .download-button:hover {
-    background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
-}
-
 
 @media (min-width: 768px) {
     .gallery-grid, .community-grid {
@@ -170,22 +176,6 @@ button {
     text-decoration: underline;
 }
 
-.confused-cat {
-    width: 300px;
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-input {
-    width: 60%;
-    padding: 10px;
-    font-size: 1em;
-}
 
 .not-found h2 {
     font-size: 5em;
