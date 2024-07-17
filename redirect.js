@@ -11,4 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "index.html";
         }
     }, 1000);
+
+    const currentYear = new Date().getFullYear();
+    const copyrightElement = document.getElementById("copyright");
+    copyrightElement.textContent += ` ${currentYear}`;
 });
