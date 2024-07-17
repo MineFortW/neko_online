@@ -8,11 +8,6 @@ body, html {
     height: 100%;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -20,7 +15,7 @@ body {
     padding: 20px;
 }
 
-.header {
+.header, .footer{
     background: linear-gradient(45deg, #6A1B9A, #AB47BC);
     color: white;
     padding: 20px 0;
