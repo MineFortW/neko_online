@@ -16,3 +16,4 @@ document.addEventListener("DOMContentLoaded", function() {
     const copyrightElement = document.getElementById("copyright");
     copyrightElement.textContent = `© ${currentYear} Neko: Online. Все права защищены.`;
 });
+});
