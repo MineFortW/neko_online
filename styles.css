@@ -101,6 +101,27 @@ button {
     cursor: pointer;
 }
 
+.header .download-button {
+    background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.header .download-button:hover {
+    background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
+}
+
+
 @media (min-width: 768px) {
     .gallery-grid, .community-grid {
         display: flex;
@@ -164,15 +185,6 @@ input {
     width: 60%;
     padding: 10px;
     font-size: 1em;
-}
-
-button {
-    background: #8E24AA;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .not-found h2 {
