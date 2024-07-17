@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #F5F5F5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header, .footer {
+    background: linear-gradient(45deg, #6A1B9A, #AB47BC);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header .logo {
+    margin-bottom: 20px;
+}
+
+.header .title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.header .download-button {
+    background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.header .download-button:hover {
+    background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
+}
+.main {
+    margin: 40px 0;
+}
+
+.main h2, .gallery h2, .community h2, .info h2, .support h2 {
+    text-align: center;
+}
+
+.gallery, .community, .info, .support {
+    margin-bottom: 40px;
+}
+
+.gallery-grid, .community-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img, .community img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.section-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-content p {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+.footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, button {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #8E24AA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid, .community-grid {
+        display: flex;
+        gap: 20px;
+    }
+    .gallery img, .community img {
+        width: 33.33%;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    gap: 20px; /* Расстояние между слайдами */
+    padding: 20px; /* Внутренний отступ для боковых слайдов */
+}
+
+.swiper-slide {
+    overflow: hidden; /* Скрытие контента, выходящего за пределы слайда */
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 100%; /* Ширина изображений на всю ширину слайда */
+    height: auto;
+    border-radius: 10px; /* Закругление углов */
+}
