@@ -11,6 +11,7 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Минимальная высота экрана */
 }
 
 .container {
@@ -27,17 +28,6 @@ body {
     text-align: center;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #6A1B9A, #AB47BC);
-    z-index: -1;
-}
-
 
 .header .logo {
     margin-bottom: 20px;
@@ -48,6 +38,16 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+.main {
+    margin: 40px 0;
+    flex: 1; /* Занимает всё доступное пространство */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
 .header .download-button {
     background: linear-gradient(45deg, #D500F9, #E040FB); /* Более светлые цвета градиента для кнопки */
@@ -67,14 +67,6 @@ body {
 
 .header .download-button:hover {
     background: linear-gradient(45deg, #E040FB, #EA80FC); /* Ещё более светлый градиент при наведении */
-}
-.main {
-    margin: 40px 0;
-    flex: 1; /* Занимает всё доступное пространство */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .main h2, .gallery h2, .community h2, .info h2, .support h2 {
