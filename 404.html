@@ -31,10 +31,11 @@
                 <br>
                 <p>Но не волнуйтесь, мы вас вернем на <a href="index.html">главную страницу</a>.</p>
                 <p>Или попробуйте найти нужную информацию с помощью поиска:</p>
-                <form>
-                    <input type="text" placeholder="Искать...">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Искать...">
                     <button type="submit">Поиск</button>
                 </form>
+                <div id="search-results"></div>
             </div>
         </section>
     </main>
@@ -46,5 +47,6 @@
     </footer>
     <script src="scripts.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
