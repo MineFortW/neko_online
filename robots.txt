@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /debug-app.apk
 Allow: /
 
 Sitemap: https://nekoonline.ru/sitemap.xml
