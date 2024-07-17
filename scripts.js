@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-
+    
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.getElementById("copyright");
-    copyrightElement.textContent += ` ${currentYear}`;
+    copyrightElement.textContent = `© ${currentYear} Neko: Online. Все права защищены.`;
 });
