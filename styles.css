@@ -131,6 +131,18 @@ button {
     .gallery img, .community img {
         width: 33.33%;
     }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .intro, .info {
+        flex: 1;
+        margin: 10px;
+    }
 }
 
 .swiper-container {
@@ -154,23 +166,6 @@ button {
     height: auto;
     border-radius: 10px; /* Закругление углов */
 }
-
-.not-found h2 {
-    font-size: 5em;
-    margin: 20px 0;
-    color: #D500F9;
-}
-
-.not-found p {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.not-found a {
-    color: #AB47BC;
-    text-decoration: underline;
-}
-
 
 .not-found h2 {
     font-size: 5em;
