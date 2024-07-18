@@ -144,6 +144,7 @@ button {
         margin: 10px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     .intro .section-content, .info .section-content {
@@ -151,6 +152,18 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro, .info {
+        margin: 10px 0;
     }
 }
 
