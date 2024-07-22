@@ -66,3 +66,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const copyrightElement = document.getElementById("copyright");
     copyrightElement.textContent = `© ${currentYear} Neko: Online. Все права защищены.`;
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    function checkServerStatus() {
+        fetch('https://92.246.76.191:2222', { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('server-status-text').textContent = 'В сети';
+                    document.getElementById('server-status-indicator').classList.add('online');
+                    document.getElementById('server-status-indicator').classList.remove('offline');
+                } else {
+                    document.getElementById('server-status-text').textContent = 'Не в сети';
+                    document.getElementById('server-status-indicator').classList.add('offline');
+                    document.getElementById('server-status-indicator').classList.remove('online');
+                }
+            })
+            .catch(error => {
+                document.getElementById('server-status-text').textContent = 'Не в сети';
+                document.getElementById('server-status-indicator').classList.add('offline');
+                document.getElementById('server-status-indicator').classList.remove('online');
+            });
+    }
+
+    // Проверяем статус сервера при загрузке страницы
+    checkServerStatus();
+    
+    // Можно добавить периодическую проверку
+    setInterval(checkServerStatus, 60000); // Проверка каждые 60 секунд
+});
