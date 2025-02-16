@@ -26,7 +26,6 @@
             text-transform: uppercase;
             margin-top: 50px;
             animation: fadeIn 2s ease;
-            color: #fff;
         }
 
         .heart {
@@ -100,6 +99,8 @@
             gap: 20px;
             margin-top: 50px;
             animation: fadeIn 2s ease 2s;
+            flex-wrap: wrap; /* To prevent overflow */
+            justify-content: space-around; /* Better placement on small screens */
         }
 
         .gallery img {
@@ -155,12 +156,18 @@
             color: #ffe6e6;
             font-size: 1.4em;
         }
+
+        /* Fix for ensuring the footer is always at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
 
 <h1>С Днем Святого Валентина, Александра Ивановна!</h1>
-
 
 <div class="greeting">
     Дорогая Александра Ивановна! В этот день, который наполнен любовью и теплом, я хочу
@@ -185,7 +192,6 @@
 <div class="message">
     Спасибо, что всегда поддерживаешь и вдохновляешь меня! Ты — настоящая звезда, которая
     всегда готова поделиться теплотой и радостью с окружающими. 🌟
-
 </div>
 
 <div class="quote">
